@@ -1,0 +1,69 @@
+UNIX ---
+ALL THE MAC OS THEY ARE UNIX BASED...
+unix is foundation of linuxo
+
+LINUX-- 
+OPEN SOURCE AND COMUNITY SUPPORT-- IT IS FREE... PROVIDE SECURITY---
+ALL THE MAC OS ,,
+there are two types of interfaces--
+command line and graphical interfaces--
+
+
+CLI AND GUI---
+
+ls -- it will list the content of directory
+when we use / command is ls-- then it will give all 
+the children of roots
+c
+
+/ is basically root node
+
+
+cd..  --using this we can do back from a folder...
+using this cd.. we can do back to one level up...
+
+
+pwd-- print working directory ---
+this will print the absolute path of the directory
+	
+	
+
+touch --- this will create new file
+touch 2.txt --- this will create a file 1.txt
+
+
+
+mkdir--- create a new directory
+
+cp---copy the file
+mv-- move the file
+
+
+
+if we want to delete an empty folder---- rmd
+
+
+if we want to create an folder(directory) --- mkdir--
+mkdir directory1
+
+touch 2.txt ---- this will create a new file---
+echo >"Hello world" >2.txt ---- this will write content in the file
+
+
+cp file_location_from file_location_to ---- this will copy the file from one directory to second directory----
+cp sparsh/2.txt sparsh2/  ---- this will copy the file from one directory to another directory...
+
+mv dir1 dir2 --- this will move the file from one directory to another ...
+
+
+
+
+mv 1.txt sparsh2/  -----this will move 1.txt to sparsh2....
+cp 2.txt sparsh2/ --- this will copy 2.txt to sparsh2 ---
+
+
+
+ls-a ---- this will even show the hidden files
+
+history--- this will show the history
+

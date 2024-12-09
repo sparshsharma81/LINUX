@@ -1,0 +1,13 @@
+users in linux----
+
+there are two types of user in linux
+regular-- home directory -- who can access his directory
+root user --- who has full access to the directories... who can access any directories---
+sudo.mkdir === this will make directories-- telling hte linux that it is the root directory----
+sudo su mkdir=== this will tell the linux that the main parent is doing operation in the linux...
+
+
+sudo mkdir
+sudo su mkdir 
+
+https://raggingcomplaint-2xht47c4z-81sparshs-projects.vercel.app/
