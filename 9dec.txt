@@ -67,3 +67,105 @@ ls-a ---- this will even show the hidden files
 
 history--- this will show the history
 
+rmdir --- remove an empty file
+
+CTRL + ALT + T --- OPEN TERMINAL IN UBUNTU SHORTCUT
+
+CTRL + D --- CLOSE THE TERMINAL
+
+KERNAL --- IT IS A SYSTEM OR SOFTWARE THAT ESTABLISH CONNECTION
+BETWEEN SOFTWARE AND HARDWARE
+
+
+cd / ----- this will make the terminal go to move
+cd / -------- this will log out to bin
+cd /bin --- this will open the bin
+
+the bin is a compiled file that contains the compiled sources code 
+
+this is also know as executable because it is executed on computer
+
+/bin is a sub-directory of the root directory in unix
+bin --- has basic executable files like the files which are executable----
+like ls , and these types of commands .--- that are present in the linux
+
+
+
+ls root ke andar konsi directory ke andar hai ---
+
+
+
+/sbin-- this contains system binary / super binary files 
+
+
+
+
+3. Basic Linux Commands
+Command	Description
+pwd	Print working directory.
+ls	List directory contents.
+cd	Change directory.
+mkdir	Create directories.
+rmdir	Remove empty directories.
+rm	Remove files or directories.
+cp	Copy files and directories.
+mv	Move/rename files or directories.
+touch	Create an empty file.
+cat	Display file contents.
+echo	Print text or variables.
+man	Display manual for a command.
+sudo	Run a command with superuser privileges.
+exit	Logout from the current session.
+
+
+
+
+
+
+2. Linux File System Hierarchy
+/: Root directory.
+/bin: Essential binaries (e.g., ls, mkdir).
+/sbin: System binaries (e.g., reboot, ifconfig).
+/etc: Configuration files (e.g., network settings).
+/home: User home directories.
+/var: Variable files (e.g., logs).
+/usr: User applications.
+/tmp: Temporary files.
+
+
+
+
+bin is inside the root --
+
+history --- it will simply tell about all the commands which are used
+
+sudo mkdir sparsh --- this will create a directory named sparsh-
+if the directory is created in the root then it need sudo--
+sudo -- giving it permission--
+else it does not need sudo---
+
+
+rmdir sparsh --- this will remove the directory sparsh--if 
+it is not empty--
+and if the sparsh directory is created in the root--
+then we can do it with --sudo rmdir sparsh--
+
+cd / this will make the terminal move to root directory
+
+
+
+
+1. File and Directory Management
+Command	Description
+pwd	Print current working directory.
+ls	List files and directories.
+cd	Change directory.
+mkdir	Create directories.
+rmdir	Remove empty directories.
+rm	Remove files or directories.
+cp	Copy files or directories.
+mv	Move/rename files or directories.
+touch	Create empty files or update file timestamps.
+find	Search for files and directories.
+locate	Quickly search for files (requires mlocate package).
+tree	Display directory structure in tree format.
