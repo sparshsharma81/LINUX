@@ -1,0 +1,54 @@
+if we want to make 100 folders in directory---
+mkdir folder{1..10}------ this will create folders from 1 to 10
+
+
+ls -l  ==== all the files are listed in list order
+relative path====  current directory me path
+absolute path === starts with root 
+
+
+mkdir folder{1..10} ---- this will create file from 1 to 10
+rmdir folder{1..10} --- this will delete all folder from 1 to 10
+
+file creation in cat...
+
+
+cat---
+
+-----there is greater than symbol used here > ....
+
+using the ctrl+d ---
+we will get removed from the file...
+
+
+
+
+USING CAT---
+step1.> first we need to write cat >file1.txt 
+by using this we can write the content in the cat file and then---
+we can press ctrl + d in order to exit from the file...
+
+step2...> if we needed to add more lines in that.. 
+then we can do like cat >>file1.txt
+and then we can type and then again in order to exit we can do ---
+ctrl + d..
+
+
+
+STEP3.> if we want to want the content inside the cat-- then we can do like this...
+cat file1.txt --- we can see the inner content..
+
+
+
+
+COMBINATION OF TWO FILES--
+WE CAN MERGE TWO FILES USING ----
+
+cat file1 file2 > file3
+
+using this .. all the content of file1 and file2 is copied in the file3...
+
+watching the content of file
+if we want to see the content of the file linewise.. then we can use 
+cat - n file3.txt 
+this will present all the data of file in lines...i.e in numbering order...

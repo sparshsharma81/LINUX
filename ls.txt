@@ -1,0 +1,4 @@
+ls file
+
+ls-a --- Display almost all the files including hidden
+
