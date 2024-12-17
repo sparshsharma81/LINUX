@@ -52,3 +52,5 @@ watching the content of file
 if we want to see the content of the file linewise.. then we can use 
 cat - n file3.txt 
 this will present all the data of file in lines...i.e in numbering order...
+
+

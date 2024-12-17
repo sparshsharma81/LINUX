@@ -1,0 +1,14 @@
+there are different types of editors...
+
+nano dec9.txt
+nano text editor---
+
+TO CLOSE NANO----- 
+CTRL + O .--- CTRL + X -- ENTER...
+
+
+
+ escape shift+ column:
+ and then wq + enter
+
+

@@ -1,0 +1,55 @@
+///FILE PERMISSIONS...
+
+user/owner ==== represented by 'u'
+
+group ==== Represented by 'g'
+
+others Represented by 'o'
+
+all    represented by 'a'
+
+
+PERMISSIONS TYPES ---
+NUMBER   PERMISSIONS
+
+0 NO PERMISSION..
+
+
+            TABLE FILEPERMISSIONS....
+
+PERMISSION-TYPE        FOR FILES       FOR DIRECTORIES
+
+
+
+
+ls-l 
+-rw-rw-r-- 1 
+
+chmod u+x, g+x, o+w file1.txt === this is used in changing the permission..
+
+x-- execute
+r -- read
+w ---write
+
+
+permission with numbers...
+1 -- execute
+2 --- write
+3 --- execute + write
+4 --- read 
+5 ---- read + write
+6 ---- read write 
+7 ---- read write execute 
+
+chown root demo.txt 
+ls-l 
+
+
+command to change the owner of file....
+
+
+
+
+
+
+
