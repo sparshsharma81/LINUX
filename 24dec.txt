@@ -1,0 +1,2 @@
+more and less command..
+less cu2.txt =----
