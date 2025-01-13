@@ -61,3 +61,17 @@ ctrl + W --- we can search in nano editor
 
 process management commands -- like checking the running process
 1.ps command --- that list all the processes
+
+ps aux -- list all the proecess which are running in background also
+
+kill - 9 process_id  --- this will terminate the id 
+
+in windows and linux -- the path path difference is that in windows there are all forward slash
+while in linux -- there are all backslash
+
+
+what is the main difference between shell and command
+
+if you give any command..then shell will give it to kernal
+shell is a interface between kernal and user
+shell basically verify karega aur kernal ko dede ga 
