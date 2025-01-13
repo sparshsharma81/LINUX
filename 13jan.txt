@@ -1,0 +1,63 @@
+more and less
+
+Summary Table:
+Feature	more	                less	          nano
+Search Forward	                /search_term	  /search_term	                Ctrl + W
+Search Backward	                Not Available     ?search_term	                Ctrl + W + Ctrl + Y
+Next Match	                    n	              n	                            Ctrl + W + Enter
+Previous Match              	N	              N	                            Not Available
+Case Sensitivity	            Not Configurable  -i (for case-insensitive)	    -i (for case-sensitive)
+
+
+in more when we display the content of the file then it is on terminal
+in more the content is on terminal
+
+
+SEARCHING OCCURENCE OF WORD IN FILE 
+/name -- this means ki jagah jagah pr name aa raha hoga..vo show ho jayega
+
+
+
+difference between head and tail commmand 
+head --
+display the starting...
+by default starting 10 lines
+
+head -c 20 filename 
+//this will display starting 20 lines
+
+chmod -- change file permission
+
+u g o 
+u -- the owner of the file
+
+g -- a group of user who can change the file permission
+
+o -- all other users..
+
+
+rwx
+x --1
+w -- 2
+r -- 4
+r-x --5 
+r-w --6
+rwx--
+
+what is the difference between nano and vim
+
+vim -- save and exit --- wq
+:w -- save 
+
+
+
+nano -- 
+ctrl + X 
+ctrl + O 
+
+ctrl + W --- we can search in nano editor
+
+
+
+process management commands -- like checking the running process
+1.ps command --- that list all the processes
