@@ -154,3 +154,7 @@ this will sort by keeping the numbers on top and strings on botton
 piping --- we write command and suppose it has output
 if we execute any command then we use its output as a input for second command
 
+
+uniq--- this command will give unique output if the data of the file is sorted...
+
+
