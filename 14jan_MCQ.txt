@@ -1,0 +1,156 @@
+top --- just like task manager will show the task
+kill --- it terminates the process
+
+
+
+					
+To change the current directory to "Downloads," what command should you use?	 cd/~Downloads
+	cd /Downloads	cd ~/Downloads	cd ..Downloads	change /Downloads
+
+
+
+    
+Which command is used to create a
+new directory called "Photos" under the "Documents" directory?	mkdir Documents/photos
+
+	        mkdir Documents/Photos ---Correct
+    	    mkdir /home/john/Pictures/Photos
+        	mkdir ./Photos	
+            mkdir ../Documents/Photos
+
+
+How do you remove an empty directory "Temporary" under the "Desktop" directory?	--- 
+        rmdir Temporary
+     	rm -rf Desktop/Temporary    
+    	rmdir -p Desktop/Temporary   ---Correct
+    	rmdir Desktop/Temporary
+
+To create an empty file called "report.txt" in the "Documents/Work/Reports" directory,
+ which command would you use?	
+ 	touch Documents/Work/Reports/report.txt	----correct answer
+    touch /home/Documents/Work/Reports/report.txt	
+    create Documents/Work/Reports/report.txt
+    	touch /Reports/report.txt
+
+
+What command allows you to rename a file or directory?---mv 
+		rn  	
+		rename
+	  	mv  ----correct
+	 	change
+
+To remove a file named "oldfile.txt" from the "Desktop" directory, which command would you use?	
+	delete Desktop/oldfile.txt
+    rm /home/Desktop/oldfile.txt
+   	rm ~Desktop/oldfile.txt ---correct
+	remove Desktop/oldfile.txt
+
+To find files and directories in the system, you can use the "locate" command. What does it search for?	
+	Currently running processes	
+    Files and directories based on their names---correct
+    Active network connections	
+    System hardware information
+
+What command is used to forcefully remove a Pictures Folder?		
+
+        delete -r Pictures	
+        rmdir -r Pictures
+	    rm -r Pictures ---correct
+    	Both B and C 
+
+
+		Explanation:
+		rmdir sirf empty folder ko delete karta hai
+		so the answer is rm-r Pictures
+
+How can you change the permissions of a file to make it
+ readable, writable, and executable for the owner,
+ but only readable for others?
+
+ 		            chmod 777 file.txt
+        	        chmod 644 file.txt
+            	    chmod 755 file.txt 
+                	chmod 666 file.txt
+
+Explanation:
+7: Read (4) + Write (2) + Execute (1) = 7 (for the owner).
+5: Read (4) + Execute (1) = 5 (for the group and others).
+
+we need to make readable writeable executable --- so the required answer is none of these
+
+
+
+How do you find the absolute path of a file named "important.txt"
+located within the "Projects" directory under "Documents/Work"?
+
+        find /home/john/Documents/Work -name important.txt --Correct 
+	    locate Documents/Work/Projects/important.txt
+	    search important.txt in Documents/Work	
+        locate -a important.txt
+
+
+Explanation:
+ek point se durse point tak-- relative
+jo starting se ho --- absolute 
+
+
+What command is used to change the access mode of a file in symbolic notation,
+granting read and write permissions to the owner,
+read-only permissions to the group, and no permissions to others?
+  
+  		    chmod 624 file.txt	
+            chmod u+rw, g+r, o-r file.txt --Correct
+        	chmod 124 file.txt	
+            chmod 746 file.txt
+
+Explanation:
+This grants:
+u+rw: Read and write for the owner.
+g+r: Read for the group.
+o-r: No permissions for others.
+
+To recursively copy a directory and its contents, 
+preserving ownership and permissions, which command should you use?	
+	            cp -pR
+    	        cp -a   --Correct
+        	    cp -p
+            	cp -rO
+
+
+What command would you use to remove a directory "Public" and its contents?
+		        rmdir Public	
+                rm -rf Public ---Correct
+        	    delete Public  
+            	remove -d Public
+To copy a directory and its contents 
+from "Documents/Work" to "Documents/Archives," 
+which command should you use?	
+
+	cp Documents/Work Documents/Archives	
+    cp -r Documents/Work Documents/Archives	   -----Correct
+    mv Documents/Work Documents/Archives
+	copy Documents/Work Documents/Archives
+
+
+
+
+
+man ls
+cat > sort.txt -- use to enter the data
+sort sort.txt ---use to sort the items 
+ctrl + d to exit 
+
+sort sort.txt --- sort in ascending order
+
+sort -n sort2.txt 
+--- this will sort the values meaning strings on top priority and numbers on the lower
+ 
+
+sort sort2.txt 
+this will sort by keeping the numbers on top and strings on botton
+
+
+
+piping --- we write command and suppose it has output
+if we execute any command then we use its output as a input for second command
+
