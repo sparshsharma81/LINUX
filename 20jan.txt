@@ -1,0 +1,97 @@
+ps,top,kill
+sort,
+uniq
+piping
+
+
+
+
+abc
+d 
+e 
+f 
+ab 
+ab 
+c 
+c 
+d 
+e 
+ab 
+c 
+
+uniq command is applied on sorted list
+uniq command operates line by line
+
+like when it goes to first line and then it goes to second line and then it will not find the duplicate 
+elements so it will not skip and print everything 
+
+
+if we do sorting then all the same elements are adjacent...
+so for using uniq , we want that the duplicate elements are supposed to be removed 
+so for that all the elements are supposed to be sorted in order to work properly
+else it will remove only duplicate adjacent elements 
+
+
+
+
+ps -- list of all running processes 
+like when we open firebox or any such,,then everything process has a unique id..
+ps will list all those processes 
+
+
+
+we are given two files 
+f1.txt 
+f2.txt 
+
+we need to skip the repeated words in the file need to store 
+the output after skipping new output in f3.txt 
+
+
+echo "apple banana mango orange" >file1.txt
+echo "orange mango peach apple graphes" > file2.txt
+
+cat file1.txt file2.txt tr ' ' '/n' | sort | uniq >file3.txt 
+
+tr ' ' '\n' --- convert space-separated words into new-line separated words 
+
+
+----this command will first sort and then remove the duplicate element 
+basically from both of the files remove duplicate elements
+
+
+
+
+package installer
+psudo update
+
+sudo apt upgrade --
+--all the installed updated packages are installed
+
+UPGRADE AND UPDATE
+
+
+1. Update (🔄 Small Fixes & Improvements)
+Definition: An update modifies the existing software/package by adding bug fixes, security patches, or minor improvements.
+Size: Usually small.
+Effect: Keeps the current version but improves it.
+Example (Linux Terminal - APT):
+bash
+Copy
+Edit
+
+sudo apt update
+
+This refreshes the package list to check for newer versions of installed packages.
+
+
+2. Upgrade (⬆️ New Features & Versions)
+Definition: An upgrade replaces the existing software/package with a newer major version that may introduce new features.
+Size: Larger than an update.
+Effect: Moves from an older version to a newer version.
+Example (Linux Terminal - APT):
+bash
+Copy
+Edit
+sudo apt upgrade
+This installs the newest versions of the packages found during the update.
