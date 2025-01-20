@@ -95,3 +95,11 @@ Copy
 Edit
 sudo apt upgrade
 This installs the newest versions of the packages found during the update.
+
+
+
+
+sudo apt full-upgrade 
+remove the unncecessary packages
+
+sudo apt install vim git vlc 
