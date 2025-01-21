@@ -1,0 +1,22 @@
+sudo apt update
+
+sudo apt upgrade
+
+sudo apt install vim vlc firefox git 
+
+sudo apt remove vim
+sudo apt purge git
+
+
+
+cmp f1 f2
+it basically when it find the different commands then it will print its byte
+
+su 
+apt install sudo 
+usermod -aG sudo vboxuser 
+
+
+
+
+
