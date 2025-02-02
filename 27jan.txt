@@ -1,0 +1,97 @@
+mkdir 
+pwd
+cd
+history
+find
+
+ls--list working directory
+cd --- change directory
+mkdir --- make directory
+rmdir -- remove empty directories
+cp--copy files
+mv---move or rename file
+
+
+
+user details
+
+uname---
+the command 'uname' displays the information about the system
+--uname --gives infomation about the system
+uname -r ---release version of UBUNTU
+
+
+
+
+TESTPAD
+
+
+id:
+
+Prints the real and effective user and group IDs. It prints user and group information for the specified USERNAME, or (when USERNAME omitted) for the current user. You can use the below options with it:
+
+TAG      DESCRIPTION
+
+-a      ignore, for compatibility with other versions
+
+-Z, --context   print only the security context of the current user
+
+-g, --group   print only the effective group ID
+
+-G, --groups   print all group IDs
+
+-n, --name   print a name instead of a number, for -ugG
+
+-r, --real   print the real ID instead of the effective ID, with -ugG.
+
+-u, --user   print only the effective user ID.
+
+$ id -a
+uid=0(root) gid=0(root) groups=0(root)
+$ id -G
+0
+$ id -u
+0
+uname:
+
+It prints the system information. You can use it with below options:
+
+OPTION DESCRIPTION
+
+-a, --all     print all information, in the following order, except omit -p and -i if unknown:
+
+-s, --kernel-name   print the kernel name
+
+-n, --nodename   print the network node hostname
+
+-r, --kernel-release print the kernel release
+
+-v, --kernel-version print the kernel version
+
+-m, --machine     print the machine hardware name
+
+-p, --processor     print the processor type or "unknown"
+
+-i, --hardware-platform print the hardware platform or "unknown"
+
+-o, --operating-system print the operating system
+
+--help      display this help and exit
+
+--version     output version information and exit
+
+$ uname -a
+Linux 25d27f320857 5.4.0-70-generic #78-Ubuntu SMP Fri Mar 19 13:29:52 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+$ uname -m
+x86_64
+
+
+
+
+
+DU 
+command du stands for disk usage. it is used to check the information of disk usage of files and directories on a system
+
+ 
+filesystem  size  used   avail  use%   Mounted on
+udev    210M   0  210M  0%  /dev
