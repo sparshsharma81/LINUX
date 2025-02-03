@@ -1,0 +1,45 @@
+when we enter the factory the user give us certain permission,
+
+like giving access to certain user 
+
+like we have maken 3 user, and giving access to each user 
+
+MANAGEING USER 
+scenario: as a linux system administrator, you are responsible for creating user accounts, managing groups and modifing permissions according to company requirements
+
+your company has tasked you with creating 3 new user accounts for the new hires.You have also been asked to create 3 groups for the new departments that have been 
+established. And finally, in order to adhere to data privacy and compliance regulationsm you need to ensure that the right
+permissions are put in place
+
+Objective
+=----
+
+
+Section-1: creating direcotries and files
+step1: 
+the very first step will be to connect to your linux(Ubuntu) instance via the terminal. you can use any terminal of your 
+
+in root--- if we write 
+
+
+Ques--- user ki details kisme hoti hai
+
+sudo adduser vboxuser_1 --this code will create a new user
+
+if you want to switch between user -
+            su vboxuser_1 
+and then it will ask for password 
+and then you will switch from one user to another user 
+
+
+
+apt install sudo 
+usermod -aG sudo abc
+
+
+
+if we forget the password of the root.. we can reset it ,,
+
+sudo passwd root
+
+passwd --- this will change the password 
