@@ -1,0 +1,162 @@
+q1- file create data.txt
+write 5 random numbers 1 per line in file 
+copy data.txt to new file backup.txt
+
+rename data.txt to original.txt 
+display the contents of both original and backup
+
+
+q2-- create 3 file fileA.txt, fileB.txt, fileC.txt containing a sentence in all three files.
+Combine the three files into a single file combine.txt
+split combined.txt in two files -- store the first two sentence in one file new.txt and the remaining 
+in newfile1.txt 
+Display the contents of both files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- file create data.txt 
+
+                write 5 random numbers 1 per line in file 
+
+                copy data.txt to new file backup.txt 
+
+Rename data.txt to original.txt 
+
+Display the contents of both original and backup 
+
+ChatGPT said:
+Here are the Linux commands to achieve this step by step:
+
+Step 1: Create data.txt and Write 5 Random Numbers
+bash
+Copy
+Edit
+for i in {1..5}; do echo $((RANDOM % 100)) >> data.txt; done
+Generates 5 random numbers (between 0-99)
+Writes them one per line into data.txt
+Step 2: Copy data.txt to backup.txt
+bash
+Copy
+Edit
+cp data.txt backup.txt
+Copies data.txt to backup.txt
+Step 3: Rename data.txt to original.txt
+bash
+Copy
+Edit
+mv data.txt original.txt
+Renames data.txt to original.txt
+Step 4: Display Contents of original.txt and backup.txt
+bash
+Copy
+Edit
+echo "Contents of original.txt:"
+cat original.txt
+
+echo "Contents of backup.txt:"
+cat backup.txt
+Prints the contents of both original.txt and backup.txt
+Final One-Liner Command
+You can combine all steps into a single command:
+
+bash
+Copy
+Edit
+for i in {1..5}; do echo $((RANDOM % 100)) >> data.txt; done && cp data.txt backup.txt && mv data.txt original.txt && echo "Contents of original.txt:" && cat original.txt && echo "Contents of backup.txt:" && cat backup.txt
+This will execute all steps at once in Linux. 🚀
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ques 2 :- Create 3 file fileA.txt , fileB.txt , file3.txt containing a sentence in all three files 
+
+Combine the three files into a single file combine.txt 
+
+Split combined.txt in two files - Store the first two sentence in one file new.txt and the remaining 
+
+In newfile1.txt 
+
+Display the contents of both files 
+
+
+
+
+
+
+Ques 2 :- Create 3 file fileA.txt , fileB.txt , file3.txt containing a sentence in all three files 
+
+Combine the three files into a single file combine.txt 
+
+Split combined.txt in two files - Store the first two sentence in one file new.txt and the remaining 
+
+In newfile1.txt 
+
+Display the contents of both files 
+
+ChatGPT said:
+Here are the Linux commands to complete the task step by step:
+
+Step 1: Create fileA.txt, fileB.txt, file3.txt and Write a Sentence in Each
+bash
+Copy
+Edit
+echo "This is the first sentence from fileA." > fileA.txt
+echo "This is the second sentence from fileB." > fileB.txt
+echo "This is the third sentence from file3." > file3.txt
+Creates three files with one sentence each.
+Step 2: Combine fileA.txt, fileB.txt, file3.txt into combine.txt
+bash
+Copy
+Edit
+cat fileA.txt fileB.txt file3.txt > combine.txt
+Merges all three files into combine.txt
+Step 3: Split combine.txt into new.txt (first two sentences) and newfile1.txt (remaining)
+bash
+Copy
+Edit
+head -n 2 combine.txt > new.txt
+tail -n +3 combine.txt > newfile1.txt
+head -n 2 → Extracts the first two sentences into new.txt
+tail -n +3 → Extracts the remaining sentence(s) into newfile1.txt
+Step 4: Display Contents of new.txt and newfile1.txt
+bash
+Copy
+Edit
+echo "Contents of new.txt:"
+cat new.txt
+
+echo "Contents of newfile1.txt:"
+cat newfile1.txt
+Prints the contents of both files.
+Final One-Liner Command
+You can execute all steps at once with:
+
+bash
+Copy
+Edit
+echo "This is the first sentence from fileA." > fileA.txt && echo "This is the second sentence from fileB." > fileB.txt && echo "This is the third sentence from file3." > file3.txt && cat fileA.txt fileB.txt file3.txt > combine.txt && head -n 2 combine.txt > new.txt && tail -n +3 combine.txt > newfile1.txt && echo "Contents of new.txt:" && cat new.txt && echo "Contents of newfile1.txt:" && cat newfile1.txt
+This completes the task automatically in Linux! 🚀
