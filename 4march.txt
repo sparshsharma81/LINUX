@@ -1,0 +1,50 @@
+wc -- this will count the number of words in file
+when we do wc -- we will see three outputs -- 
+total number of words 
+total number of lines
+total number of characters
+
+
+grep command
+--it will search regular expression in command 
+grep <expression> filename
+
+
+grep this grep.txt
+this is a file on 
+ -- it will search that the word "this" is present or not
+
+
+ grep -c this grep.txt 
+ --this will tell the frequency of the word "this"
+ --- c is basically count 
+
+ grep -v this grep.txt 
+ ----
+ --  -v will exclude the line and print the file
+
+ grep -n this grep.txt
+  ---  -n will give the number of that line 
+
+  
+  and if we need to check one word in two file ..
+  then grep -c this grep.txt grep3.txt 
+
+
+  check available 
+  df -T  
+  --this will tell kon kitni space le raha hai
+   
+
+
+
+   list of supported files
+   /proc/filesystems
+
+   the most supported file system is EXT4 
+
+   but since it is a file so we have to open it using cat 
+   cat/proc/filesystems
+
+
+   question---you are given a number --- write script code to print all the prime numbers till that 

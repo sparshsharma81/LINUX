@@ -1,0 +1,49 @@
+we make a file and then make a funciton in that file and then in another file we gonna call the function
+
+
+#!/bin/bash
+x=22
+y=11
+add(){
+    echo "$1 + $2 = $(($1 + $2))"
+
+}
+multiply(){
+    echo "$1 * $2 = $(($1 * $2))"
+
+}
+divide(){
+    echo "$1 / $2 = $(($1 / $2))"
+}
+
+
+---NOW MAKING ANOTHER FILE 
+AND MAKE THEM EXECUTABLE 
+
+
+in order to import the file --- it is used as 
+source ./calc_functions.sh
+
+OR 
+
+. ./calc_functions.sh 
+
+
+
+
+FILE SYSTEMS...
+
+WHAT IS A FILE SYSTEM 
+MAJORY --WE USE EXT4 FILE SYSTEM 
+
+A FILE SYSTEM IS A METHOD OF STORING AND ORGANIZING 
+
+
+AS PER CHO EXT4 AND EFS ARE IMPORTANT
+
+
+
+cat.proc.filesystems --- using this we know our kernal support which file system..
+
+by default the file system is ext4 --
+all the spaces are inside the ext4

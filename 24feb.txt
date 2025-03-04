@@ -1,0 +1,19 @@
+#!bin/bash
+read -p"Enter a:", a
+read -p"Enter b:",b
+if [[$a -eq 0 && $b -eq 0 ]]; then
+echo "undefined"
+exit 1
+fi -----ye find result hota hai
+result = 1;
+for((i =0;i<b;i++));do
+result = $((result*a))
+done
+echo "$result"
+
+
+
+
+after making file we need to give the permission of running it 
+chmod +x script.sh
+./sript.sh 
