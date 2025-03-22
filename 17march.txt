@@ -1,0 +1,140 @@
+create the operator 1 user and confirm that it exists in the system.
+set the password for operator1. create the additional operator2 and operators3 users.
+set their password as well.
+run the usermod -c command to update the comments of the operator1 user account.
+remove the operator3 user from the system.
+
+
+
+
+Here are the Linux commands to achieve each step:
+
+Step 1: Create the operator1 user
+bash
+Copy
+Edit
+sudo useradd operator1
+Step 2: Confirm that operator1 exists
+bash
+Copy
+Edit
+getent passwd operator1
+(If operator1 exists, this will return a line with user details.)
+
+Step 3: Set the password for operator1
+bash
+Copy
+Edit
+sudo passwd operator1
+(Enter the password when prompted.)
+
+Step 4: Create operator2 and operator3 users
+bash
+Copy
+Edit
+sudo useradd operator2
+sudo useradd operator3
+Step 5: Set passwords for operator2 and operator3
+bash
+Copy
+Edit
+sudo passwd operator2
+sudo passwd operator3
+Step 6: Update comments for operator1 using usermod -c
+bash
+Copy
+Edit
+sudo usermod -c "Primary system operator" operator1
+Step 7: Remove the operator3 user
+bash
+Copy
+Edit
+sudo userdel operator3
+(If you also want to remove their home directory, use sudo userdel -r operator3.)
+
+
+
+NOW AFTER THIS....
+YOU NEED TO MOUNT DEFAULT FILE SYSTEM IN A directory
+
+sudo mount df -h ///default file system present
+
+
+
+
+
+
+
+
+
+1. Identify the Default File System
+Run the following command to check the default file system type:
+
+bash
+Copy
+Edit
+df -T
+This will list all mounted file systems and their types. The default file system is usually ext4, xfs, or btrfs.
+
+2. Create a Mount Point
+A mount point is a directory where the file system will be mounted. Create one using:
+
+bash
+Copy
+Edit
+sudo mkdir /mnt/defaultfs
+3. Find the Default File System's Device
+Use:
+
+bash
+Copy
+Edit
+lsblk
+or
+
+bash
+Copy
+Edit
+sudo blkid
+The root file system (/) is usually mounted on /dev/sdaX (where X is a number).
+
+4. Mount the File System
+To mount the default file system to the directory /mnt/defaultfs:
+
+bash
+Copy
+Edit
+sudo mount /dev/sdaX /mnt/defaultfs
+Replace /dev/sdaX with the correct partition name.
+
+5. Verify the Mount
+Run:
+
+bash
+Copy
+Edit
+df -hT
+Check if /mnt/defaultfs is listed with the correct file system.
+
+6. (Optional) Make the Mount Persistent
+To ensure the file system mounts automatically on boot, add an entry in /etc/fstab:
+
+bash
+Copy
+Edit
+sudo nano /etc/fstab
+Add this line at the end:
+
+bash
+Copy
+Edit
+/dev/sdaX  /mnt/defaultfs  ext4  defaults  0  2
+Then save and exit.
+
+Unmount the File System (if needed)
+If you want to unmount it:
+
+bash
+Copy
+Edit
+sudo umount /mnt/defaultfs

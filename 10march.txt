@@ -1,0 +1,6 @@
+df - T
+identify the type of system of mounted partision
+
+
+sudo umount /mnt 
+---it will remove 

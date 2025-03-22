@@ -1,0 +1,11 @@
+disk partisioning..
+
+when we login in the linux..there is a option of pendrive..
+just write click on it and choose the name of the pendrive...
+
+
+gip and gb ---
+
+
+
+sudo fdisk - l 
