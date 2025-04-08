@@ -1,0 +1,15 @@
+to find the length of a string in linux --
+ ${#string}  --it will find the lenght of a string 
+
+
+
+in order to declare an array ---
+
+marks=(25 72 61 43 83) 
+
+if we want to access the elements at specific index 
+{marks[0]} 
+
+if we want to print all the elements of array --- {marks[@]}
+
+if we want to find the length of the array --- {#marks[@]} --basically just write # before the it....

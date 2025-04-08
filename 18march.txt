@@ -9,3 +9,6 @@ gip and gb ---
 
 
 sudo fdisk - l 
+
+
+
