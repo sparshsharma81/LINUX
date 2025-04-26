@@ -1,0 +1,24 @@
+lvm 
+
+
+mounting --- attaching a file system to a directory
+
+unmounting --- removing a file system to directory 
+
+
+dmsg --- shows system kernal message ..
+
+piping ---- we execute two commands
+the first command output work as a input for other command 
+
+
+like we need to find the error with dsmg command 
+
+grep - i error --- it 
+globlally search a regular expression 
+ 
+it will serach error all over the file and will show the result 
+
+
+top --- it will show all the process 
+if we want to kill a process...then we will just write 
