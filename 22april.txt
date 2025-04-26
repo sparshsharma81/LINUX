@@ -1,0 +1,70 @@
+tar -evf hellotar file{1..15}
+top
+
+sudo apt install htop
+
+htop
+tar 
+
+top -p
+
+top -m
+
+kill 
+
+
+
+
+The tar command in Linux is used to archive multiple files and directories into a single file. It's often used for backup and compression purposes.
+
+Basic Functions of tar:
+Combine multiple files/directories into one .tar archive.
+
+Extract files from a .tar archive.
+
+Optionally compress the archive (with gzip or bzip2).
+
+Common tar Options:
+
+Option	Meaning
+-c	Create a new archive
+-x	Extract files from an archive
+-v	Verbose (show progress)
+-f	Use archive file (name after this)
+-z	Compress with gzip (.tar.gz)
+-j	Compress with bzip2 (.tar.bz2)
+-C	Change to directory when extracting
+Example Commands:
+Create an archive:
+
+bash
+Copy
+Edit
+tar -cvf archive.tar folder/
+Extract an archive:
+
+bash
+Copy
+Edit
+tar -xvf archive.tar
+Create a compressed archive (gzip):
+
+bash
+Copy
+Edit
+tar -czvf archive.tar.gz folder/
+Extract a compressed archive:
+
+bash
+Copy
+Edit
+tar -xzvf archive.tar.gz
+Let me know if you want examples for .tar.bz2, or how to extract to a specific directory.
+
+
+
+
+
+
+
+
