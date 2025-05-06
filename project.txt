@@ -1,0 +1,151 @@
+#!/bin/bash
+
+TMP_FILE=$(mktemp)
+
+list_processes_detailed() {
+    {
+        echo -e "PID\tName\t\t\tMemory(KB)\tCPU Time(s)"
+        echo "---------------------------------------------------------------"
+        for pid in $(ls /proc | grep -E '^[0-9]+$'); do
+            if [ -f "/proc/$pid/stat" ] && [ -f "/proc/$pid/status" ]; then
+                name=$(cat /proc/$pid/comm 2>/dev/null)
+                mem=$(grep VmRSS /proc/$pid/status 2>/dev/null | awk '{print $2}')
+                stat=($(cat /proc/$pid/stat))
+                utime=${stat[13]}
+                stime=${stat[14]}
+                total_time=$(( (utime + stime) / 100 ))
+                printf "%s\t%-20s\t%s\t\t%s\n" "$pid" "$name" "${mem:-0}" "$total_time"
+            fi
+        done | sort -k3 -n -r
+    } > "$TMP_FILE"
+    dialog --title "Detailed Process List (Sorted by Memory)" --textbox "$TMP_FILE" 25 90
+}
+
+search_process() {
+    name=$(dialog --inputbox "Enter process name to search:" 8 40 --stdout)
+    [ -z "$name" ] && return
+
+    {
+        echo -e "PID\tName"
+        echo "----------------------"
+        for pid in $(ls /proc | grep -E '^[0-9]+$'); do
+            pname=$(cat /proc/$pid/comm 2>/dev/null)
+            if [[ "$pname" == "$name" ]]; then
+                echo -e "$pid\t$pname"
+            fi
+        done
+    } > "$TMP_FILE"
+    dialog --title "Search Results for '$name'" --textbox "$TMP_FILE" 20 60
+}
+
+kill_by_pid() {
+    pid=$(dialog --inputbox "Enter PID to kill:" 8 40 --stdout)
+    [ -z "$pid" ] && return
+
+    if kill -9 "$pid" 2>/dev/null; then
+        dialog --msgbox "Process $pid killed successfully." 6 40
+    else
+        dialog --msgbox "Failed to kill process $pid. You might need sudo." 6 50
+    fi
+}
+
+kill_by_name() {
+    name=$(dialog --inputbox "Enter process name to kill:" 8 40 --stdout)
+    [ -z "$name" ] && return
+
+    choices=$(ps -eo pid,comm | grep -w "$name" | awk '{print $1 " " $2}')
+    echo "$choices" > "$TMP_FILE"
+    pid=$(dialog --menu "Select process to kill" 20 50 10 $(cat "$TMP_FILE") --stdout)
+
+    if [ -n "$pid" ]; then
+        if kill -9 "$pid" 2>/dev/null; then
+            dialog --msgbox "Process $pid killed successfully." 6 40
+        else
+            dialog --msgbox "Failed to kill process $pid." 6 40
+        fi
+    fi
+}
+
+view_process_details() {
+    pid=$(dialog --inputbox "Enter PID to view details:" 8 40 --stdout)
+    [ -z "$pid" ] && return
+
+    if [ -d "/proc/$pid" ]; then
+        {
+            echo "Name: $(cat /proc/$pid/comm 2>/dev/null)"
+            echo "Status: $(grep State /proc/$pid/status 2>/dev/null)"
+            echo "PPID: $(grep PPid /proc/$pid/status 2>/dev/null)"
+            echo "Threads: $(grep Threads /proc/$pid/status 2>/dev/null)"
+            echo "Memory (VmRSS): $(grep VmRSS /proc/$pid/status 2>/dev/null)"
+            echo "Open file descriptors: $(ls /proc/$pid/fd 2>/dev/null | wc -l)"
+        } > "$TMP_FILE"
+        dialog --title "Process $pid Details" --textbox "$TMP_FILE" 20 60
+    else
+        dialog --msgbox "Process $pid does not exist." 6 40
+    fi
+}
+
+filter_by_user() {
+    user=$(dialog --inputbox "Enter username:" 8 40 --stdout)
+    [ -z "$user" ] && return
+
+    ps -u "$user" > "$TMP_FILE" 2>/dev/null
+    if [ $? -eq 0 ]; then
+        dialog --title "Processes for user '$user'" --textbox "$TMP_FILE" 25 80
+    else
+        dialog --msgbox "No processes found or invalid username." 6 50
+    fi
+}
+
+save_report() {
+    filename="process_report_$(date +%F_%H-%M-%S).txt"
+    {
+        echo "PID    Name                Mem(KB)    CPU Time"
+        echo "---------------------------------------------"
+        for pid in $(ls /proc | grep -E '^[0-9]+$'); do
+            if [ -f "/proc/$pid/stat" ] && [ -f "/proc/$pid/status" ]; then
+                name=$(cat /proc/$pid/comm 2>/dev/null)
+                mem=$(grep VmRSS /proc/$pid/status 2>/dev/null | awk '{print $2}')
+                stat=($(cat /proc/$pid/stat))
+                utime=${stat[13]}
+                stime=${stat[14]}
+                total_time=$(( (utime + stime) / 100 ))
+                printf "%-6s %-20s %-10s %s\n" "$pid" "$name" "${mem:-0}" "$total_time"
+            fi
+        done
+    } > "$HOME/$filename"
+
+    dialog --msgbox "Report saved to: $HOME/$filename" 6 60
+}
+
+main_menu() {
+    while true; do
+        choice=$(dialog --clear --backtitle "Linux Process Manager - Merged Version" \
+            --title "Main Menu" \
+            --menu "Choose an option:" 20 60 10 \
+            1 "List Processes (Detailed View)" \
+            2 "Search Process by Name" \
+            3 "Kill Process by PID" \
+            4 "Kill Process by Name (Select)" \
+            5 "View Process Details by PID" \
+            6 "Filter Processes by User" \
+            7 "Save Process Report to File" \
+            8 "Exit" --stdout)
+
+        case "$choice" in
+            1) list_processes_detailed ;;
+            2) search_process ;;
+            3) kill_by_pid ;;
+            4) kill_by_name ;;
+            5) view_process_details ;;
+            6) filter_by_user ;;
+            7) save_report ;;
+            8) break ;;
+            *) break ;;
+        esac
+    done
+    clear
+}
+
+main_menu
+rm -f "$TMP_FILE"
